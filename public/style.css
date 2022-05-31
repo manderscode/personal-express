@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body { 
+    display: flex;
+    flex-direction: column;
+    margin: 15% 20% 0 20%;
+    text-align: center;
+    background-image: url("bg.webp");
+    background-color: pink;
+    font-family: 'Pangolin', cursive;
+    font-family: 'PT Sans', sans-serif;
+} 
+
+h1, h2, h3, ul, form {
+    align-self: center;
+    font-family: 'Pangolin', cursive;
+    font-family: 'PT Sans', sans-serif;
+    color: white; 
+
+} 

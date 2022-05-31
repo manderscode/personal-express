@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Immigrant Parent Love</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&family=Pangolin&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b350ecca7b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>How do your parents show their love to you without saying "I love you"? </h1>
+  <h2>A lot of immigrant parents do not showcase their love for their children verbally, but through their actions.</h2>
+
+
+  <h3>Messages</h3>
+  <ul class="messages">
+    <!-- red carrots are a syntax  -->
+  <% for(var i=0; i<loveData.length; i++) {%> 
+    <li class="message"> 
+      <span class="name"><%= loveData[i].name %></span>
+      <span><%= loveData[i].msg %></span>
+      <span class="heart" ><i class="fa-solid fa-heart"></i></span>
+      <span><%= loveData[i].heart %></span>
+      <span class="sadCry"><i class="fa-solid fa-face-sad-cry"></i></span>
+      <span><%= loveData[i].cry %></span>
+      <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+      </li>
+  <% } %>
+  </ul>
+
+  <h2>Add a message</h2>
+  <!-- the form action has to match on app.get on server.js -->
+  <form action="/parentLoveMessages" method="POST"> 
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="message" name="msg">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
